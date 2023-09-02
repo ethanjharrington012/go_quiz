@@ -9,6 +9,8 @@ import (
 // second I need some conditionals
 
 func main() {
+
+	score := 0
 	var i int
 
 	fmt.Print("Type a number: ")
@@ -24,6 +26,7 @@ func main() {
 	
 	if first == 1 {
 		fmt.Println("\nGreat work!")
+		score += 1
 		
 	} else {
 		fmt.Println("\nWrong. the currect answer was spongebob.\nYour answer was:", first)
@@ -35,14 +38,37 @@ func main() {
 	fmt.Scan(&second_q)
 	if second_q == 2 {
 		fmt.Println("Great work!")
+		score += 1
 		
 	} else {
 		fmt.Println("Wrong! The correct answer is blue whale. not")
 	}
 
+	var third int
+	fmt.Println("What company does Steve Jobs own?")
+	fmt.Println("\n1: Facebook\n2: Google\n3: Apple")
+	fmt.Scan(&third)
+
+	if third == 3 {
+		fmt.Println("Wow Your a MASTER!")
+		score += 1
+		fmt.Println("Your score is:", score)
+		
+
+	} else {
+		fmt.Println("DAMN you suck!")
+		fmt.Println("Your score is:", score)
+	}
 
 
 
 
 }
+
+// Next step I would like to add a scoring system, timer, difficulty level, user profiles, categories
+// Graphics and UI, high score, customizable questions
+
+// 1st the scoring system is going to look like some sort of data base or struct to store the points.
+
+// for a timer that is going to happen when a new question arrises. 
 
